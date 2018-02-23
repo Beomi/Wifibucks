@@ -18,6 +18,17 @@
         "https://first.wifi.olleh.com/starbucks/index_en.html"
       ],
       "run_at": "document_end"
+    },
+    {
+      "all_frames": true,
+      "js": [
+        "scripts/redirecthome.js"
+      ],
+      "matches": [
+        "http://www.istarbucks.co.kr/util/wireless.do",
+        "https://www.istarbucks.co.kr/util/wireless.do"
+      ],
+      "run_at": "document_start"
     }
   ],
   "description": "KT Starbucks Wi-Fi Auto Connector",
@@ -38,12 +49,13 @@
     "default_title": "Wifibucks"
   },
   "permissions": [
-    "storage",
     "http://first.wifi.olleh.com/*",
-    "https://first.wifi.olleh.com/*"
+    "https://first.wifi.olleh.com/*",
+    "http://www.istarbucks.co.kr/*",
+    "https://www.istarbucks.co.kr/*"
   ],
   "update_url": "https://clients2.google.com/service/update2/crx",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "web_accessible_resources": [
     "images/*"
   ]
